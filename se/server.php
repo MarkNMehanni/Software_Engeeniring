@@ -17,6 +17,7 @@ if(isset($_POST['Login']))
     else{
         echo"mesh sha3'ala";
     }
+    header('location: index.php');
 }
 
 if(isset($_POST['Signup']))
@@ -33,13 +34,14 @@ if(isset($_POST['Signup']))
 
      $_SESSION['username'] = $username;
      $_SESSION['usertype'] = "2";
-     
+     header('location: index.php');
 }
 
 if(isset($_POST['Logout']))
 {
     session_unset();
     session_destroy();
+    header('location: index.php');
 }
-header('location: index.php');
+
 ?>
