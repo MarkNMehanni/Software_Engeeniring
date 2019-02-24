@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 $con = new mysqli("localhost", "root", "","software_engeeniring");
+=======
+$con = new mysqli("localhost", "root", "","web-ex");
+>>>>>>> parent of 7ffbf3f... Revert "SE"
 $sql="select * from user";
 $result = mysqli_query($con,$sql);	
 if(mysqli_num_rows($result) > 0)

@@ -1,7 +1,11 @@
 <?php
    session_start();
 
+<<<<<<< HEAD
 $con = mysqli_connect("localhost", "root", "","software_engeeniring");
+=======
+$con = mysqli_connect("localhost", "root", "","web-ex");
+>>>>>>> parent of 7ffbf3f... Revert "SE"
 
 if(isset($_POST['Login']))
 {
@@ -34,7 +38,11 @@ if(isset($_POST['Signup']))
 
      $_SESSION['username'] = $username;
      $_SESSION['usertype'] = "2";
+<<<<<<< HEAD
     //  header('location: index.php');
+=======
+     header('location: index.php');
+>>>>>>> parent of 7ffbf3f... Revert "SE"
 }
 
 if(isset($_POST['Logout']))
