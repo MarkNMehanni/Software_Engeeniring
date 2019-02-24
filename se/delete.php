@@ -19,10 +19,8 @@ if(mysqli_num_rows($result) > 0)
 		echo "<td>" . $row['ID'] . "</td>";
 		echo "<td>" . $row['Username'] . "</td>";
 		echo "<td>". $row['Age'] ."</td>";
-    }
-    echo"<tr>
-    <td align='center' bgcolor='#CCCCCC' colspan='4'><input type='submit' name='submit'></td></tr>";
-    echo"</table>";
+	}
+	echo"</table>";
     echo"</form>";
  }
 
