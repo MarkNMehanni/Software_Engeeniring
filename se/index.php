@@ -7,6 +7,7 @@ if(isset($_SESSION['username']))
 =======
     $con = mysqli_connect("localhost", "root", "","web-ex");
 >>>>>>> parent of 7ffbf3f... Revert "SE"
+        $con = mysqli_connect("localhost", "root", "","software_engeeniring");
 
     $usertype = $_SESSION['usertype'];
     $sql = "SELECT * FROM links where Typenum='$usertype'";
