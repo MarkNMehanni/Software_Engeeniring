@@ -2,11 +2,6 @@
 
 if(isset($_SESSION['username']))
 {
-<<<<<<< HEAD
-    $con = mysqli_connect("localhost", "root", "","software_engeeniring");
-=======
-    $con = mysqli_connect("localhost", "root", "","web-ex");
->>>>>>> parent of 7ffbf3f... Revert "SE"
         $con = mysqli_connect("localhost", "root", "","software_engeeniring");
 
     $usertype = $_SESSION['usertype'];
