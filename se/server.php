@@ -29,12 +29,19 @@ if(isset($_POST['Signup']))
 	$lname=$_POST['lastname'];
     $age=$_POST['age'];
     
+    echo $username;
+    echo $password;
+    echo $email;
+    echo $fname;
+    echo $lname;
+    echo $age;
+
     mysqli_query($con,"INSERT INTO user ( `Username`, `Password`, `Email`, `Firstname`, `Lastname`, `Age`, `Typenum`)
      VALUES ('$username','$password','$email','$fname','$lname','$age', '2')");
 
      $_SESSION['username'] = $username;
      $_SESSION['usertype'] = "2";
-     header('location: index.php');
+     //header('location: index.php');
 }
 
 if(isset($_POST['Logout']))
