@@ -1,5 +1,5 @@
 <?php
-$con = new mysqli("localhost", "root", "","web-ex");
+$con = new mysqli("localhost", "root", "","software_engeeniring");
 if(isset($_POST['submit']))
 {
 	$id=$_POST['id'];

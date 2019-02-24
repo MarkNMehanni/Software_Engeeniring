@@ -1,7 +1,7 @@
 <?php
    session_start();
 
-$con = mysqli_connect("localhost", "root", "","web-ex");
+$con = mysqli_connect("localhost", "root", "","software_engeeniring");
 
 if(isset($_POST['Login']))
 {

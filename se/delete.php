@@ -1,5 +1,5 @@
 <?php
-$con = new mysqli("localhost", "root", "","web-ex");
+$con = new mysqli("localhost", "root", "","software_engeeniring");
 $sql="select * from user";
 $result = mysqli_query($con,$sql);	
 if(mysqli_num_rows($result) > 0)

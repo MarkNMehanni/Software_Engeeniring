@@ -1,6 +1,6 @@
 <?php
 $id=$_GET['id'];
-$con = new mysqli("localhost", "root", "","web-ex");
+$con = new mysqli("localhost", "root", "","software_engeeniring");
 $result=mysqli_query($con, "SELECT * FROM user WHERE ID=$id");
 
 while($res = mysqli_fetch_array($result))
