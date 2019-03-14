@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+#customers {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+#customers td, #customers th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+
+
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #4CAF50;
+color: white;
+}
+</style>
+
+
+    <title>Document</title>
+</head>
+<body>
+        <nav class="navbar navbar-inverse visible-xs">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">Logo</a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Dashboard</a></li>
+                      <li><a href="#">Age</a></li>
+                      <li><a href="#">Gender</a></li>
+                      <li><a href="#">Geo</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              
+              <div class="container-fluid">
+                <div class="row content">
+                  <div class="col-sm-3 sidenav hidden-xs">
+                    <h2>Logo</h2>
+                    <ul class="nav nav-pills nav-stacked">
+                      <li class="active"><a href="#section1">Dashboard</a></li>
+                      <li><a href="#section2">Age</a></li>
+                      <li><a href="#section3">Gender</a></li>
+                      <li><a href="#section3">Geo</a></li>
+                    </ul><br>
+                  </div>
+                  <br>
+                  
+                  <div class="col-sm-9">
+                    <div class="well">
+                            Name <input name="firstname" type="text">
+                            Governorate <select name="Governorate">
+                                    <option value="All">All</option>    
+                                    <option value="Alexandria">Alexandria</option>
+                                    <option value="Cairo">Cairo</option>
+                                    <option value="Giza">Giza</option>
+                                    <option value="Matruh">Matruh</option>
+                                  </select>
+                            Expertise <select name="Expertise">
+                                    <option value="All">All</option>    
+                                    <option value="Heart">Heart</option>
+                                    <option value="Teeth">Teeth</option>
+                                    <option value="Bones">Bones</option>
+                                  </select>
+                                  <button type="submit" ><i class="fa fa-search"></i></button>
+                                  <br>
+                                  <br>
+                                  <br>
+                            <table id="customers">
+                              <tr>
+                                <th>Name</th>
+                                <th>Telephone</th>
+                                <th>Address</th>
+                                <th>Expertise</th>
+                                <th>Governorate</th>
+                                <th>Delete</th>
+                              </tr>
+                              <tr>
+                                <td>Alfreds Futterkiste</td>
+                                <td>Maria Anders</td>
+                                <td>Germany</td>
+                                <td></td>
+                                <td></td>
+                                <td><button class="btn" style="width: 100%;background-color: transparent"><i class="fa fa-trash"></i></button></td>
+                              </tr>
+                              <tr>
+                                <td>Berglunds snabbköp</td>
+                                <td>Christina Berglund</td>
+                                <td>Sweden</td>
+                              </tr>
+                              <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr>
+                              <tr>
+                                <td>Ernst Handel</td>
+                                <td>Roland Mendel</td>
+                                <td>Austria</td>
+                              </tr>
+                              <tr>
+                                <td>Island Trading</td>
+                                <td>Helen Bennett</td>
+                                <td>UK</td>
+                              </tr>
+                              <tr>
+                                <td>Königlich Essen</td>
+                                <td>Philip Cramer</td>
+                                <td>Germany</td>
+                              </tr>
+                              <tr>
+                                <td>Laughing Bacchus Winecellars</td>
+                                <td>Yoshi Tannamuri</td>
+                                <td>Canada</td>
+                              </tr>
+                              <tr>
+                                <td>Magazzini Alimentari Riuniti</td>
+                                <td>Giovanni Rovelli</td>
+                                <td>Italy</td>
+                              </tr>
+                              <tr>
+                                <td>North/South</td>
+                                <td>Simon Crowther</td>
+                                <td>UK</td>
+                              </tr>
+                              <tr>
+                                <td>Paris spécialités</td>
+                                <td>Marie Bertrand</td>
+                                <td>France</td>
+                              </tr>
+                            </table>
+                    </div>
+                    
+                    </div>
+                  </div>
+                </div>
+              
+</body>
+</html>

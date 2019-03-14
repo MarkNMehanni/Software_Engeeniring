@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        .well{
+            height: 110px;
+
+        }
+        .btn {
+  background-color: Transparent; /* Blue background */
+  border: none; /* Remove borders */
+  color: black; /* White text */
+  position: relative;
+  padding: 0px 50px; /* Some padding */
+  font-size: 40px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+.btncount{
+    font-size: 20px;
+    padding-left: 85px ;
+}
+.image{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 5px;
+}
+
+
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+        <nav class="navbar navbar-inverse visible-xs">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">Logo</a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Dashboard</a></li>
+                      <li><a href="#">Age</a></li>
+                      <li><a href="#">Gender</a></li>
+                      <li><a href="#">Geo</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              
+              <div class="container-fluid">
+                <div class="row content">
+                  <div class="col-sm-3 sidenav hidden-xs">
+                    <h2>Logo</h2>
+                    <ul class="nav nav-pills nav-stacked">
+                      <li class="active"><a href="#section1">Dashboard</a></li>
+                      <li><a href="#section2">Age</a></li>
+                      <li><a href="#section3">Gender</a></li>
+                      <li><a href="#section3">Geo</a></li>
+                    </ul><br>
+                  </div>
+                  <br>
+                  
+                  <div class="col-sm-9">
+                    <div class="well">
+                      <h4>Dashboard</h4>
+                      <p>Some text..</p>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="well" style="background-color: brown">
+                                <button class="btn"><i class="fa fa-user-md"></i> Doctor</button>
+                                <p class="btncount">1 Million</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-4" >
+                        <div class="well" style="background-color: blue">
+                                <button class="btn"><i class="fa fa-flask"></i> Labs</button>
+                                <p class="btncount" id="doctorcount">1 Million</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="well" style="background-color: blue">
+                                <button class="btn"><img src="Xray2.png" class="image"> X-ray</button>
+                                <p class="btncount" id="doctorcount">1 Million</p>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <!-- <div class="well"> -->
+                                <div id="doctorchart" style="width: 100%;height: 400px;position: relative; bottom: 75px"></div>
+                                <script type="text/javascript">
+                                    // Load google charts
+                                    google.charts.load('current', {'packages':['corechart']});
+                                    google.charts.setOnLoadCallback(drawChart);
+                                    
+                                    // Draw the chart and set the chart values
+                                    function drawChart() {
+                                      var data = google.visualization.arrayToDataTable([
+                                      ['Doctor', 'Contributes per Day'],
+                                      ['Doctor1', 8],
+                                      ['Doctor2', 2],
+                                      ['Doctor3', 2],
+                                      ['Doctor4', 2],
+                                      ['Doctor5', 2],
+                                      ['Doctor6', 8]
+                                    ]);
+                                    
+                                      // Optional; add a title and set the width and height of the chart
+                                      var options = {title: "",legend: {position: "none"},backgroundColor: 'transparent'};
+                                    
+                                      // Display the chart inside the <div> element with id="piechart"
+                                      var chart = new google.visualization.PieChart(document.getElementById('doctorchart'));
+                                      chart.draw(data, options);
+                                    }
+                                    </script>
+                        <!-- </div> -->
+                      </div>
+                      <div class="col-sm-4">
+                            <div id="labschart" style="width: 100%;height: 400px;position: relative; bottom: 75px"></div>
+                            <script type="text/javascript">
+                                // Load google charts
+                                google.charts.load('current', {'packages':['corechart']});
+                                google.charts.setOnLoadCallback(drawChart);
+                                
+                                // Draw the chart and set the chart values
+                                function drawChart() {
+                                  var data = google.visualization.arrayToDataTable([
+                                  ['Labs', 'Contributes per Day'],
+                                  ['Lab1', 18],
+                                  ['Lab2', 26],
+                                  ['Lab3', 12],
+                                  ['Lab4', 20]
+                                ]);
+                                
+                                  // Optional; add a title and set the width and height of the chart
+                                  var options = {title: "",legend: {position: "none"},backgroundColor: 'transparent'};
+                                
+                                  // Display the chart inside the <div> element with id="piechart"
+                                  var chart = new google.visualization.PieChart(document.getElementById('labschart'));
+                                  chart.draw(data, options);
+                                }
+                                </script>
+                      </div>
+                      <div class="col-sm-4">
+                            <div id="xraychart" style="width: 100%;height: 400px;position: relative; bottom: 75px"></div>
+                            <script type="text/javascript">
+                                // Load google charts
+                                google.charts.load('current', {'packages':['corechart']});
+                                google.charts.setOnLoadCallback(drawChart);
+                                
+                                // Draw the chart and set the chart values
+                                function drawChart() {
+                                  var data = google.visualization.arrayToDataTable([
+                                  ['Xray Center', 'Contributes per Day'],
+                                  ['Center1', 18],
+                                  ['Center2', 26],
+                                  ['Center3', 12],
+                                  ['Center4', 10],
+                                  ['Center5', 20]
+                                ]);
+                                
+                                  // Optional; add a title and set the width and height of the chart
+                                  var options = {title: "",legend: {position: "none"},backgroundColor: 'transparent'};
+                                
+                                  // Display the chart inside the <div> element with id="piechart"
+                                  var chart = new google.visualization.PieChart(document.getElementById('xraychart'));
+                                  chart.draw(data, options);
+                                }
+                                </script>
+                      </div>
+                    </div>
+                    <!-- <div class="row">
+                      <div class="col-sm-8">
+                        <div class="well">
+                          <p>Text</p> 
+                        </div>
+                      </div> -->
+                      <!-- <div class="col-sm-4">
+                        <div class="well">
+                          <p>Text</p> 
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+  background:  rgb(0, 99, 64); /* fallback for old browsers */
+        }
+        .container {
+          position: fixed;
+          left: 100px;
+          top: 100px;
+          width: 20%;
+        }
+        .container2 {
+           position:fixed;
+           left: 500px;
+          top: 100px;
+          width: 20%; 
+        }
+        .container3 {
+           position:fixed;
+           left: 900px;
+          top: 100px;
+          width: 20%; 
+        }
+        .image {
+          display: block;
+          width: 100%;
+          height: 50%;
+        }
+
+        
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: .5s ease;
+          background-color:  rgb(55, 161, 162);
+        }
+        
+        .container:hover .overlay {
+          opacity: 1;
+        }
+        .container2:hover .overlay {
+          opacity: 1;
+        }
+        .container3:hover .overlay {
+          opacity: 1;
+        }
+        .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Doctor.png" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Doctors</div>
+        </div>
+      </div>
+      <div class="container2">
+        <img src="Lab.png" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Labs</div>
+        </div>
+      </div>
+      <div class="container3">
+        <img src="Xray2.png" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">X-ray</div>
+        </div>
+      </div>
+</body>
+</html>

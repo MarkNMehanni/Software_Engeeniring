@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+
+.div1 {
+    position: relative;
+  bottom: 0.5cm;
+    background-image: radial-gradient(circle, black 0.5px, transparent 1px); 
+  background-repeat: repeat-x;
+  background-size: 6px 2px;
+  height: 16px;
+  margin: 1px;
+  width: 95%;
+  text-align: center;
+  margin: 0 auto;
+}
+div{
+    padding-right: 20px;
+    position: relative;
+}
+
+
+body {
+    
+	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 16px;
+	line-height:30px;
+	color:#777;
+	background:#0CF;
+}
+
+
+
+       
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: rgb(55, 161, 162);
+            }
+            
+            li {
+              float: left;
+            }
+            
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            
+            li a:hover {
+              background-color: #111;
+            }
+            
+            </style>
+</head>
+<body>
+        <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+              <div class="container" >  
+                    
+                            <form style="width: 21cm;height:29.7cm;color:#000000;position: relative;top:20px;left:20% ;background-color: rgb(255, 255, 255); text-align:right;display: block;box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5)">
+                                    <img src="Logo.png" alt="Smiley face" height="60" width="60">
+                                    <hr>
+                                    <div style="left:10px;top:10px;border-width: 1px;text-align: right;padding-right:0px;border-style: solid;width: 20%">
+                                    <label >user1</label> :القائم بالتحويل
+                                     <br>
+                                    
+                                    <label id="datetime"></label>  :التاريخ
+                                    <br>
+                                    
+                                    <script>
+                                            var dt = new Date();
+                                            document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+                                            </script>
+                                </div>
+                                <div  >
+                                        <select style="width: 50px"></select>
+                                    /الدكتور
+                                
+                                </div>
+                                <div style="text-align:center">
+                                        ،،تحية طيبة و بعد  
+                                </div>
+                                <div >
+                                   / برجاء الكشف على المريض  
+
+                                </div>
+                                <div style="left:20px;border-style: solid;border-width: 1px; text-decoration-line: underline; text-decoration-style: solid;width: 95%  ">
+                                <b> -: خاص بالدكتور / أحمد عصام - المدير الطبي للمؤسسة     </b>
+                                <br>
+                                <br>
+                                <br>
+                                </div>
+                                <div>
+                                    علي أن يكتب التشخيص و المطلوب فى أخر الورقة
+                                </div>
+                                <hr style="height:0.5px; border:none; color:#000; background-color:#000; width:95%; text-align:center; margin: 0 auto;">
+                                <hr style="height:1px; border:none; color:#000; background-color:#000; width:95%; text-align:center; margin: 0.1em auto;">
+                                <div>
+                                    <b>خاص بالدكتور</b>
+                                    <br>
+                                    <p style="line-height: 0.5cm;">بعد الكشف على الحالة المذكورة تبين أنها </p>
+                                    <br>
+                                    <div class="div1"></div>
+                                    <div class="div1"></div>
+                                   <p style="position: relative;bottom: 0.8cm;"> /و تحتاج الى </p>
+                                    <div class="div1" style="bottom:1.2cm;width:80%"></div>
+                                     <div style="bottom:1.2cm;">أي ملاحظات اخرى</div>
+                                     <div style="text-align: left;padding-left: 20px">المدير الطبي</div>
+
+                                </div>
+                                
+                                  </form>
+                  </div>
+</body>
+</html>
