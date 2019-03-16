@@ -2,7 +2,7 @@
 
 class receiver 
 {
-    public $id;
+    public $ID;
     public $Name;
     public $Email;
     public $Mobile;
@@ -43,10 +43,17 @@ class receiver
 
     }
 
-    function update()
+    function update($object)
     {
 
+        $con=new mysqli("localhost","root","","software_engeeniring");
 
-
+        $sql="UPDATE `receiver` 
+        SET `Name`='".$object->Name."',`Email`='".$object->Email."',`Mobile`='".$object->Mobile."',`Telephone`='".$object->Telephone."',
+        `Specialty`='".$object->Specialty."',`Address`='".$object->Address."',`Place`='".$object->Place."',`Category`='".$object->Category."',
+        `WorkingHours`='".$object->WorkingHours."', `WorkingDays`='".$object->WorkingDays."',`Payment`='".$object->Payment."'
+         WHERE ID='".$object->ID."'";
+         mysqli_query($con,$sql);
+         header('location: ../view_doctor.php');
     }
 }
