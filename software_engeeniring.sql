@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2019 at 09:49 PM
+-- Generation Time: Mar 16, 2019 at 06:20 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -72,17 +72,18 @@ CREATE TABLE `receiver` (
   `Category` varchar(55) NOT NULL,
   `WorkingHours` varchar(55) NOT NULL,
   `WorkingDays` varchar(55) NOT NULL,
-  `Payment` varchar(55) NOT NULL
+  `Payment` varchar(55) NOT NULL,
+  `isDeleted` varchar(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `receiver`
 --
 
-INSERT INTO `receiver` (`ID`, `Name`, `Email`, `Mobile`, `Telephone`, `Specialty`, `Address`, `Place`, `Category`, `WorkingHours`, `WorkingDays`, `Payment`) VALUES
-(1, 'Hamada', '', 0, 0, '', 0, '', '', '', '', ''),
-(2, 'Helal', '', 0, 0, '', 0, '', '', '', '', ''),
-(5, 'Mark', 'markopoo@somemail.com', 111111111, 2222222, 'Heart', 3, 'Home', 'Kids', '9AM - 9PM', 'Sunday to Thursday', 'Free');
+INSERT INTO `receiver` (`ID`, `Name`, `Email`, `Mobile`, `Telephone`, `Specialty`, `Address`, `Place`, `Category`, `WorkingHours`, `WorkingDays`, `Payment`, `isDeleted`) VALUES
+(5, 'Mark', 'markopoo@somemail.com', 111111111, 2222222, 'Heart', 3, 'Home', 'Kids', '9AM - 9PM', 'Sunday to Thursday', 'Paid', '0'),
+(8, 'mark', 'markipoo@mail.com', 3214, 1234, 'heart', 1, 'home', 'kids', '8 to 9', 'sat to sun', 'free', '0'),
+(9, 'ffhg', 'fg@k.com', 234, 324, 'f', 0, 'gfh', 'f', 'g', 'ghf', 'gh', '0');
 
 -- --------------------------------------------------------
 
@@ -224,7 +225,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `receiver`
 --
 ALTER TABLE `receiver`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `referreddetails`
