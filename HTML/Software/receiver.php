@@ -15,13 +15,17 @@ class receiver
     public $WorkingDays;
     public $Payment;
 
+    public function receiver(){
+		
+	}
+
     public function add($object)
     {
         
         $con=new mysqli("localhost","root","","software_engeeniring");
 
-        $sql="INSERT INTO `receiver` (`ID`, `Name`, `Email`, `Mobile`, `Telephone`, `Specialty`, `Address`, `Place`, `Category`, `WorkingHours`, `WorkingDays`, `Payment`)
-         VALUES ('$object->id', '$object->email', '$object->mobile', '$object->telephone', '$object->specialty', '$object->address', '$object->place', '$object->category', '$object->workinghours', '$object->workingdays', '$object->payment')";
+        $sql="INSERT INTO `receiver` (`Name`, `Email`, `Mobile`, `Telephone`, `Specialty`, `Address`, `Place`, `Category`, `WorkingHours`, `WorkingDays`, `Payment`)
+         VALUES ('".$object->Name."','".$object->Email."', '".$object->Mobile."', '".$object->Telephone."', '".$object->Specialty."', '".$object->Address."', '".$object->Place."', '".$object->Category."', '".$object->WorkingHours."', '".$object->WorkingDays."', '".$object->Payment."')";
             
         mysqli_query($con,$sql);
         
