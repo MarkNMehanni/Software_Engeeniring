@@ -24,11 +24,11 @@ class receiver
         
         $con=new mysqli("localhost","root","","software_engeeniring");
 
-        $sql="INSERT INTO `receiver` (`Name`, `Email`, `Mobile`, `Telephone`, `Specialty`, `Address`, `Place`, `Category`, `WorkingHours`, `WorkingDays`, `Payment`)
-         VALUES ('".$object->Name."','".$object->Email."', '".$object->Mobile."', '".$object->Telephone."', '".$object->Specialty."', '".$object->Address."', '".$object->Place."', '".$object->Category."', '".$object->WorkingHours."', '".$object->WorkingDays."', '".$object->Payment."')";
+        $sql="INSERT INTO `receiver` (`Name`, `Email`, `Mobile`, `Telephone`, `Specialty`, `Address`, `Place`, `Category`, `WorkingHours`, `WorkingDays`, `Payment`, `isDeleted`)
+         VALUES ('".$object->Name."','".$object->Email."', '".$object->Mobile."', '".$object->Telephone."', '".$object->Specialty."', '".$object->Address."', '".$object->Place."', '".$object->Category."', '".$object->WorkingHours."', '".$object->WorkingDays."', '".$object->Payment."', '0')";
             
         mysqli_query($con,$sql);
-        header('location: ../Add_New_Doctor.php');
+        header('location: ../Add_New_Doctor.html');
 
     }   
          
