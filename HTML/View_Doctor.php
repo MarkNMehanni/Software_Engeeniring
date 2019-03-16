@@ -1,6 +1,6 @@
 <?php
 $con = new mysqli("localhost", "root", "","software_engeeniring");
-$sql="select * from receiver";
+$sql="select * from receiver WHERE isDeleted = '0'";
 $result = mysqli_query($con,$sql);	
 if(mysqli_num_rows($result) > 0)
 {
@@ -24,7 +24,8 @@ if(mysqli_num_rows($result) > 0)
         echo"<td>".$row['WorkingHours']."</td>";
         echo"<td>".$row['WorkingDays']."</td>";
         echo"<td>".$row['Payment']."</td>";
-		echo "<td><a href=\"Edit_Doctor.php?id=$row[ID]\">Edit</a></td>";
+        echo "<td><a href=\"Edit_Doctor.php?id=$row[ID]\">Edit</a></td>";
+        echo "<td><a href=\"Delete_Doctor.php?id=$row[ID]\">Delete</a></td>";
     }
     echo"</table>";
  }

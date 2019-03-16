@@ -28,13 +28,16 @@ class receiver
          VALUES ('".$object->Name."','".$object->Email."', '".$object->Mobile."', '".$object->Telephone."', '".$object->Specialty."', '".$object->Address."', '".$object->Place."', '".$object->Category."', '".$object->WorkingHours."', '".$object->WorkingDays."', '".$object->Payment."')";
             
         mysqli_query($con,$sql);
-        
+        header('location: ../Add_New_Doctor.php');
+
     }   
          
-    function delete()
+    function delete($object)
     {
+        $con=new mysqli("localhost","root","","software_engeeniring");
 
-
+        $result=mysqli_query($con, "UPDATE `receiver` SET `isDeleted`='1' WHERE ID='".$object->ID."'");
+        header('location: view_doctor.php');
     }
 
     function read()
