@@ -4,10 +4,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ta7welat</title>
-  <link href="formlogin.css" rel="stylesheet">
-    <script type="text/javascript" src="formlogin.js"></script>
+  <link href="assets/css/formlogin.css" rel="stylesheet">
+    <script type="text/javascript" src="assets/js/formlogin.js"></script>
 </head>
 <body>
+  <div class="sora">
+    <img src="assets/img/logo.png" />
+  </div>
 <div class="login-page">
   <div class="form">
     <form class="register-form">
