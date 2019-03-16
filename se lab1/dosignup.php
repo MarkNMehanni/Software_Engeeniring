@@ -1,8 +1,6 @@
 <?php
 include("user.php");
-
-
-
+ 
 $myobject=new user("");
 $myobject->fullname=$_POST['Fname'];
 $myobject->dob=$_POST['DOB'];
