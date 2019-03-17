@@ -17,19 +17,6 @@ class user{
 		
 	}
 	
-	public function add($object){
-	$servername="localhost";
-	$serveruser="root";
-	$password="";
-	$databasename="software_engeeniring";
-	$con=new mysqli($servername,$serveruser,$password,$databasename);
-	
-	$sql="INSERT INTO `user`(`Username`, `Password`, `Email`, `Firstname`,'Lastname','Age', `Typenum`)
-	VALUES ('".$object->Username."','".$object->Password."','".$object->Email."','".$object->Firstname."','".$object->Lastname."','".$object->Age."','".$object->Typenum."','2')";
-		
-	mysqli_query($con,$sql);
-	
-}
 
 	public function login($user,$pass){
 	$servername="localhost";
@@ -50,5 +37,45 @@ class user{
                       header('location: login.php');               
               }
 	}
+
+
+	public function add($object)
+    {
+        
+        $con=new mysqli("localhost","root","","software_engeeniring");
+	
+		$sql="INSERT INTO `user`(`Username`, `Password`, `Email`, `Firstname`, `Lastname`,
+		 `Age`, `Typenum`, `isDeleted`) 
+		VALUES ('".$object->Username."','".$object->Password."','".$object->Email."',
+		'".$object->Firstname."','".$object->Lastname."','".$object->Age."','2','0')";
+
+        mysqli_query($con,$sql);
+        header('location: index.html');
+
+    }   
+         
+    function delete($object)
+    {
+        $con=new mysqli("localhost","root","","software_engeeniring");
+
+        $result=mysqli_query($con, "UPDATE `user` SET `isDeleted`='1' WHERE ID='".$object->ID."'");
+        header('location: View_Users.php');
+	}
+	
+    function update($object)
+    {
+
+        $con=new mysqli("localhost","root","","software_engeeniring");
+
+        $sql="UPDATE `user` SET `Username`='".$object->Username."',
+		`Password`='".$object->Password."',`Email`='".$object->Email."',
+		`Firstname`='".$object->Firstname."',`Lastname`='".$object->Lastname."',
+		`Age`='".$object->Age."' WHERE ID='".$object->ID."'";
+		 mysqli_query($con,$sql);
+
+         header('location: View_Users.php');
+    }
+
+   
 }
 ?>
