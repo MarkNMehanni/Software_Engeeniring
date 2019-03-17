@@ -15,5 +15,4 @@ include("receiver.php");
     $receiver_Object->WorkingDays = $_POST['Working_Days'];
     $receiver_Object->Payment = $_POST['Payment_Method'];
     $receiver_Object->add($receiver_Object);
-    echo $receiver_Object->Name;
 ?>

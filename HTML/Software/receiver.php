@@ -59,4 +59,10 @@ class receiver
          mysqli_query($con,$sql);
          header('location: ../view_doctor.php');
     }
+
+   
+}
+class doctor extends receiver
+{
+        
 }

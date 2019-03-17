@@ -7,7 +7,9 @@
 }
 .sora{
     position: relative;
-    text-align: center;}
+    text-align: center; 
+    margin-bottom: 60px;
+  }
 .form {
   position: relative;
   z-index: 1;
