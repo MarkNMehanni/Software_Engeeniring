@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2019 at 06:20 PM
+-- Generation Time: Mar 17, 2019 at 08:43 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -83,7 +83,12 @@ CREATE TABLE `receiver` (
 INSERT INTO `receiver` (`ID`, `Name`, `Email`, `Mobile`, `Telephone`, `Specialty`, `Address`, `Place`, `Category`, `WorkingHours`, `WorkingDays`, `Payment`, `isDeleted`) VALUES
 (5, 'Mark', 'markopoo@somemail.com', 111111111, 2222222, 'Heart', 3, 'Home', 'Kids', '9AM - 9PM', 'Sunday to Thursday', 'Paid', '0'),
 (8, 'mark', 'markipoo@mail.com', 3214, 1234, 'heart', 1, 'home', 'kids', '8 to 9', 'sat to sun', 'free', '0'),
-(9, 'ffhg', 'fg@k.com', 234, 324, 'f', 0, 'gfh', 'f', 'g', 'ghf', 'gh', '0');
+(9, 'ffhg', 'fg@k.com', 234, 324, 'f', 0, 'gfh', 'f', 'g', 'ghf', 'gh', '0'),
+(10, 'asd', 'asd@asd', 351, 5120, 'sadf', 1, 'asdf', 'asdf', 'fasd', 'fadsf', 'fasd', '0'),
+(11, 'asdf', 'asdf@sad', 2134, 1234, 'fdas', 1, 'fas', 'f', 'asfa', 'f', 'afs', '0'),
+(12, 'asdf', 'asdf@sad', 2134, 1234, 'fdas', 1, 'fas', 'f', 'asfa', 'f', 'afs', '0'),
+(13, 'asdf', 'asdf@sad', 3421, 1234, 'fdas', 1, 'fas', 'f', 'asfa', 'f', 'afs', '0'),
+(14, 'ali', 'asd@asdf.com', 2154, 564, 'dsaf', 21, 'fads', 'fasdf', 'fasdf', 'fdasff', 'asdfa', '0');
 
 -- --------------------------------------------------------
 
@@ -122,22 +127,25 @@ CREATE TABLE `user` (
   `Firstname` varchar(50) NOT NULL,
   `Lastname` varchar(50) NOT NULL,
   `Age` int(11) NOT NULL,
-  `Typenum` int(11) NOT NULL
+  `Typenum` int(11) NOT NULL,
+  `isDeleted` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`ID`, `Username`, `Password`, `Email`, `Firstname`, `Lastname`, `Age`, `Typenum`) VALUES
-(2, 'Ali', '123', '0', '', '', 25, 2),
-(3, '3ebs', '123', '0', '', '', 25, 2),
-(4, 'Abdelsalam', '123', '3', 'mohamed', 'abdelsalam', 25, 2),
-(5, '3absalam', '123', '7', 'mark', 'nabil', 25, 2),
-(6, 'Tester1', '123', '7', 'mark', 'nabil', 25, 2),
-(7, 'mek1', '123', '0', 'aly', 'mek', 21, 2),
-(8, 'test2', '123', '123', '123', '123', 25, 2),
-(9, '1234', '12312', '123', '123', '123', 132, 2);
+INSERT INTO `user` (`ID`, `Username`, `Password`, `Email`, `Firstname`, `Lastname`, `Age`, `Typenum`, `isDeleted`) VALUES
+(2, 'Ali', '123', '0', '', '', 25, 2, 1),
+(3, '3ebs', '123', '0', '', '', 25, 2, 1),
+(4, 'Abdelsalam', '123', 'test@test', 'mohamed', 'abdelsalam', 25, 2, 0),
+(5, '3absalam', '123', '7', 'mark', 'nabil', 25, 2, 0),
+(6, 'Tester1', '123', '7', 'mark', 'nabil', 25, 2, 0),
+(7, 'mek1', '123', '0', 'aly', 'mek', 21, 2, 0),
+(8, 'test2', '123', '123', '123', '123', 25, 2, 0),
+(9, '1234', '12312', '123', '123', '123', 132, 2, 0),
+(10, 'asdf', '123', 'asdf@asdf', '0123', 'adsf', 123, 2, 0),
+(11, 'test', 'test', 'test@test', 'test', 'test', 21, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -225,7 +233,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `receiver`
 --
 ALTER TABLE `receiver`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `referreddetails`
@@ -237,7 +245,7 @@ ALTER TABLE `referreddetails`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
