@@ -72,7 +72,7 @@ font-size: 16px;
 
 background-color: rgb(55, 161, 162);
 border-color: #F0F0F0;
-min-height: 80px;
+min-height: 110px;
 }
 
 
@@ -144,7 +144,7 @@ min-height: 80px;
     .navbar-side {
         z-index: 1;
         position: absolute;
-        width: 260px;
+        width: 288px;
        
     }
 
