@@ -3,7 +3,11 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <title>Ta7welat</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="../CSS/bootstrap.css" rel="stylesheet" />
@@ -73,24 +77,24 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                  
-                    <li class="active-link" value="Next">
-                        <a href="Referral.html" ><i class="fa fa-desktop "></i> Referrals </a>
-                    </li>
-                
-                    <li>
-                        <a href="Admin.html" ><i class="fa fa-edit "></i>Admin</a>
-                    </li>
-
-
-                    <li>
-                        <a href="Manager.html" ><i class="fa fa-qrcode "></i>Manager</a>
-                    </li>
-                    <li>
-                        <a href="About_Us.html" ><i class="fa fa-bar-chart-o"></i>Statistics</a>
-                    </li>
-                    <li>
-                            <a href="" ><i class="fa fa-bar-chart-o"></i>About Our Organization </a>
-                    </li>
+                        <li class="active-link" value="Next">
+                                <a href="Referral.html" ><i class="fa fa-desktop "></i> Referrals </a>
+                            </li>
+                        
+                            <li>
+                                <a href="Admin.html" ><i class="fa fa-edit "></i>Admin</a>
+                            </li>
+        
+        
+                            <li>
+                                <a href="Manager.html" ><i class="fa fa-qrcode "></i>Manager</a>
+                            </li>
+                            <li>
+                                <a href="Statistics.html" ><i class="fa fa-bar-chart-o"></i>Statistics</a>
+                            </li>
+                            <li>
+                                    <a href="About_Us.html" ><i class="fa fa-bar-chart-o"></i>About Our Organization </a>
+                            </li>
 
                     
                 </ul>
@@ -100,25 +104,91 @@
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
-                <div class="row">
-                    <div class="col-lg-12">
-                     <h2>User Panel</h2>   
-
-                     <div class="row">
+                    <div class="row">
                             <div class="col-sm-4">
-                              
-                            </div>
-                            <div class="col-sm-4" >
-                              
+                              <!-- <div class="well"> -->
+                                      <div id="doctorchart" style="width: 100%;height: 400px;position: relative; bottom: 75px"></div>
+                                      <script type="text/javascript">
+                                          // Load google charts
+                                          google.charts.load('current', {'packages':['corechart']});
+                                          google.charts.setOnLoadCallback(drawChart);
+                                          
+                                          // Draw the chart and set the chart values
+                                          function drawChart() {
+                                            var data = google.visualization.arrayToDataTable([
+                                            ['Doctor', 'Contributes per Day'],
+                                            ['Doctor1', 8],
+                                            ['Doctor2', 2],
+                                            ['Doctor3', 2],
+                                            ['Doctor4', 2],
+                                            ['Doctor5', 2],
+                                            ['Doctor6', 8]
+                                          ]);
+                                          
+                                            // Optional; add a title and set the width and height of the chart
+                                            var options = {title: "",legend: {position: "none"},backgroundColor: 'transparent'};
+                                          
+                                            // Display the chart inside the <div> element with id="piechart"
+                                            var chart = new google.visualization.PieChart(document.getElementById('doctorchart'));
+                                            chart.draw(data, options);
+                                          }
+                                          </script>
+                              <!-- </div> -->
                             </div>
                             <div class="col-sm-4">
-                           
+                                  <div id="labschart" style="width: 100%;height: 400px;position: relative; bottom: 75px"></div>
+                                  <script type="text/javascript">
+                                      // Load google charts
+                                      google.charts.load('current', {'packages':['corechart']});
+                                      google.charts.setOnLoadCallback(drawChart);
+                                      
+                                      // Draw the chart and set the chart values
+                                      function drawChart() {
+                                        var data = google.visualization.arrayToDataTable([
+                                        ['Labs', 'Contributes per Day'],
+                                        ['Lab1', 18],
+                                        ['Lab2', 26],
+                                        ['Lab3', 12],
+                                        ['Lab4', 20]
+                                      ]);
+                                      
+                                        // Optional; add a title and set the width and height of the chart
+                                        var options = {title: "",legend: {position: "none"},backgroundColor: 'transparent'};
+                                      
+                                        // Display the chart inside the <div> element with id="piechart"
+                                        var chart = new google.visualization.PieChart(document.getElementById('labschart'));
+                                        chart.draw(data, options);
+                                      }
+                                      </script>
                             </div>
- 
-                    </div> 
-                </div>   
-                 
-    </div>
+                            <div class="col-sm-4">
+                                  <div id="xraychart" style="width: 100%;height: 400px;position: relative; bottom: 75px"></div>
+                                  <script type="text/javascript">
+                                      // Load google charts
+                                      google.charts.load('current', {'packages':['corechart']});
+                                      google.charts.setOnLoadCallback(drawChart);
+                                      
+                                      // Draw the chart and set the chart values
+                                      function drawChart() {
+                                        var data = google.visualization.arrayToDataTable([
+                                        ['Xray Center', 'Contributes per Day'],
+                                        ['Center1', 18],
+                                        ['Center2', 26],
+                                        ['Center3', 12],
+                                        ['Center4', 10],
+                                        ['Center5', 20]
+                                      ]);
+                                      
+                                        // Optional; add a title and set the width and height of the chart
+                                        var options = {title: "",legend: {position: "none"},backgroundColor: 'transparent'};
+                                      
+                                        // Display the chart inside the <div> element with id="piechart"
+                                        var chart = new google.visualization.PieChart(document.getElementById('xraychart'));
+                                        chart.draw(data, options);
+                                      }
+                                      </script>
+                            </div>
+                          </div>
             
              </div> 
             
